@@ -46,7 +46,7 @@ Whether you're making a **karaoke track, an acapella, a clean instrumental, a po
 
 <table>
   <tr>
-    <td width="50%" align="center"><b>The workspace — drag, drop, process</b><br><img src="docs/screenshots/02-queue.png" alt="VocalDrop main window with a queue of tracks and the processing chain"></td>
+    <td width="50%" align="center"><b>The workspace — drag, drop, process</b><br><img src="docs/screenshots/02-queue.png" alt="VocalDrop main window with the signal chain and a feed of processed results"></td>
     <td width="50%" align="center"><b>Empty state</b><br><img src="docs/screenshots/01-empty.png" alt="VocalDrop empty drag-and-drop state"></td>
   </tr>
   <tr>
