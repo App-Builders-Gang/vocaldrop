@@ -20,7 +20,7 @@
 <p align="center">
   <a href="#-installation">Install</a> ·
   <a href="#-features">Features</a> ·
-  <a href="#-screenshots">Screenshots</a> ·
+  <a href="#-the-app">The app</a> ·
   <a href="#-why-vocaldrop">vs. other tools</a> ·
   <a href="#-faq">FAQ</a>
 </p>
@@ -42,22 +42,13 @@ Whether you're making a **karaoke track, an acapella, a clean instrumental, a po
 - ⌨️ **Full CLI** — Everything the app does is scriptable from the terminal (`vocaldrop vocals song.mp3 --quality max`), with `--json` output for pipelines.
 - 🔒 **Private by design** — 100% offline. Nothing is uploaded, logged, or sent anywhere. No sign-up, no API key.
 
-## 📸 Screenshots
+## 📸 The app
 
-<table>
-  <tr>
-    <td width="50%" align="center"><b>The workspace — drag, drop, process</b><br><img src="docs/screenshots/02-queue.png" alt="VocalDrop main window with the signal chain and a feed of processed results"></td>
-    <td width="50%" align="center"><b>Empty state</b><br><img src="docs/screenshots/01-empty.png" alt="VocalDrop empty drag-and-drop state"></td>
-  </tr>
-  <tr>
-    <td width="50%" align="center"><b>Video track handling</b><br><img src="docs/screenshots/03-video-track.png" alt="VocalDrop processing a video file"></td>
-    <td width="50%" align="center"><b>Settings</b><br><img src="docs/screenshots/04-settings.png" alt="VocalDrop settings panel"></td>
-  </tr>
-  <tr>
-    <td width="50%" align="center"><b>Model manager</b><br><img src="docs/screenshots/05-models.png" alt="VocalDrop AI model download manager"></td>
-    <td width="50%" align="center"><b>About</b><br><img src="docs/screenshots/06-about.png" alt="VocalDrop about dialog"></td>
-  </tr>
-</table>
+<p align="center">
+  <img src="docs/screenshots/01-workspace.png" width="900" alt="VocalDrop workspace: a queue of audio and video tracks on the left, the per-track signal chain (isolate vocals, de-noise, enhance, remove silence, convert) in the center, and a feed of finished results on the right" />
+</p>
+
+<p align="center"><em>One window, whole workflow.</em> Drop a mix of <b>audio and video</b> into the queue, dial in the per-track signal chain — <b>isolate vocals → de-noise → AI enhance → remove silence → convert</b> — and every finished track lands in the Results feed, ready to play or reveal in Finder. Everything runs locally on your Mac.</p>
 
 ## 🆚 Why VocalDrop?
 
