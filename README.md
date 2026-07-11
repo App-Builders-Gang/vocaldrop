@@ -40,7 +40,7 @@ Whether you're making a **karaoke track, an acapella, a clean instrumental, a po
 - 🎞️ **Video support** — Drop in a music video or movie clip; VocalDrop extracts audio, processes it, and can re-mux a synced video with the isolated vocal or instrumental track.
 - 🖱️ **Finder Quick Actions** — Right-click any audio file → **Isolate Vocals** straight from Finder.
 - ⌨️ **Full CLI** — Everything the app does is scriptable from the terminal (`vocaldrop vocals song.mp3 --quality max`), with `--json` output for pipelines.
-- 🔒 **Private by design** — 100% offline. Nothing is uploaded, logged, or sent anywhere. No sign-up, no API key.
+- 🔒 **Private by design** — all processing runs locally; **your audio and files never leave your Mac**. No sign-up, no API key. (Anonymous crash & usage diagnostics help improve the app — no personal data, no file contents or paths.)
 
 ## 📸 The app
 
@@ -56,7 +56,7 @@ Most "free" vocal removers are websites that **upload your audio to someone else
 
 | | **VocalDrop** | Online tools (e.g. vocalremover.org) | Ultimate Vocal Remover (UVR5) | Moises | iZotope RX |
 |---|:---:|:---:|:---:|:---:|:---:|
-| **100% offline / private** | ✅ | ❌ uploads your files | ✅ | ❌ cloud | ✅ |
+| **Local processing / files stay private** | ✅ | ❌ uploads your files | ✅ | ❌ cloud | ✅ |
 | **Free** | ✅ | limited free tier | ✅ | paid | $$$ paid |
 | **Native macOS app** | ✅ | browser only | ❌ Python/Tk GUI | ✅ | ✅ |
 | **No watermarks / quotas** | ✅ | ❌ | ✅ | ❌ | ✅ |
@@ -113,7 +113,7 @@ All inference runs through [audio-separator](https://github.com/nomadkaraoke/pyt
 
 ## 🔒 Privacy & system requirements
 
-- **Privacy:** VocalDrop is **100% offline**. Your audio never leaves your Mac — no telemetry, no cloud, no account. The only network access is the one-time engine/model download on first launch and the optional "check for updates" toggle (which queries GitHub for the latest release tag).
+- **Privacy:** **Your audio never leaves your Mac** — all separation, conversion, and cleanup run locally; no cloud, no account. VocalDrop collects **anonymous diagnostics** (crash reports and basic usage events, via Google) to fix bugs and improve the app — never your file contents, file paths, or any personal data. Other network access is limited to the one-time engine/model download on first launch, online URL ingest when you paste a link, and the optional "check for updates" toggle.
 - **System:** macOS on **Apple Silicon** (M-series). Intel/Windows/Linux support is on the roadmap.
 - **Disk:** ~2 GB for the full model set (Fast mode needs only ~200 MB).
 - Runtime state (Python venv, temp files, default output) lives in `~/Library/Application Support/VocalDrop/`.
