@@ -2,16 +2,16 @@
   <img src="assets/icon.png" width="120" height="120" alt="VocalDrop app icon" />
 </p>
 
-<h1 align="center">VocalDrop — Free AI Vocal Remover for macOS</h1>
+<h1 align="center">VocalDrop — Free AI Vocal Isolator & Extractor</h1>
 
 <p align="center">
-  <strong>Remove vocals from any song, make acapellas, extract instruments, and clean up audio — 100% offline on your Mac.</strong>
+  <strong>Extract clean, studio-grade vocals from any song — and the instrumental too. 100% offline on your Mac, Windows, or Linux. No upload, no account, no watermark.</strong>
 </p>
 
 <p align="center">
   <a href="https://github.com/App-Builders-Gang/vocaldrop/releases/latest"><img alt="Latest release" src="https://img.shields.io/github/v/release/App-Builders-Gang/vocaldrop?display_name=tag&label=download&color=b98cff" /></a>
   <a href="https://github.com/App-Builders-Gang/vocaldrop/releases"><img alt="Downloads" src="https://img.shields.io/github/downloads/App-Builders-Gang/vocaldrop/total?label=downloads&color=blue" /></a>
-  <a href="#"><img alt="Platform" src="https://img.shields.io/badge/platform-macOS%20(Apple%20Silicon)-000000?logo=apple&logoColor=white" /></a>
+  <a href="#"><img alt="Platform" src="https://img.shields.io/badge/platform-macOS%20%C2%B7%20Windows%20%C2%B7%20Linux-000000" /></a>
   <a href="#"><img alt="Price" src="https://img.shields.io/badge/price-free-success" /></a>
   <a href="#"><img alt="Privacy" src="https://img.shields.io/badge/privacy-100%25%20offline-blueviolet" /></a>
   <a href="https://github.com/App-Builders-Gang/vocaldrop/stargazers"><img alt="Stars" src="https://img.shields.io/github/stars/App-Builders-Gang/vocaldrop?style=social" /></a>
@@ -27,67 +27,74 @@
 
 ---
 
-**VocalDrop** is a free **AI vocal remover and isolator for macOS** that runs entirely on your machine. Drag in any song or video, and state-of-the-art **RoFormer** neural models separate the vocals from the instruments in seconds — with **no uploads, no accounts, no quotas, and no watermarks**. It also converts between audio formats, removes silence, and chains all three into a single pass. Built native for Apple Silicon with automatic **Metal (MPS) GPU acceleration**.
+**VocalDrop** is a free **AI vocal isolator** that **extracts the vocals out of any song** — right on your own computer. Drop in a track or video, and state-of-the-art **RoFormer** neural models pull a clean **vocal stem** (a ready-to-use **acapella**) away from the music in seconds — with **no uploads, no accounts, no quotas, and no watermarks**. You get the **instrumental** in the same pass, so it doubles as a **vocal remover** too. It also converts between audio formats, removes silence, and chains it all into one run. Runs on **macOS, Windows, and Linux**, with automatic **Metal (MPS) GPU acceleration** on Apple Silicon.
 
-Whether you're making a **karaoke track, an acapella, a clean instrumental, a podcast edit, or a stem for remixing**, VocalDrop gives you studio-grade separation without the subscription — your audio never leaves your Mac.
+Whether you're pulling an **acapella for a remix, an isolated vocal for sampling, a clean instrumental, a karaoke track, or a podcast edit**, VocalDrop gives you studio-grade separation without the subscription — your audio never leaves your machine.
 
 ## ✨ Features
 
-- 🎤 **Isolate vocals** — Two modes: **Fast** (a single BS-Roformer pass, quick and clean) or **Max** (a 3-model ensemble → blended → de-reverbed → de-noised/de-bleded for the highest fidelity).
+- 🎤 **Extract vocals** — Isolate a clean vocal stem from any song. Two modes: **Fast** (a single BS-Roformer pass, quick and clean) or **Max** (a 3-model ensemble → blended → de-reverbed → de-noised/de-bleeded for the highest fidelity acapella).
+- 🎸 **…and the instrumental** — Every separation gives you both stems, so VocalDrop is a **vocal remover** as well — mute the vocals for an instant instrumental or karaoke track.
 - 🎛️ **Convert formats** — Transcode to `mp3`, `wav`, `flac`, `m4a`, `aac`, `ogg`, `opus`, or `aiff`, preserving metadata and cover art.
 - 🤫 **Remove silence** — Adaptive silence detection with click-free crossfade welding — perfect for podcasts, lectures, and live recordings.
-- 🔗 **Chain in one pass** — Isolate vocals → remove silence → convert, all in a single drag-and-drop run.
-- 🎞️ **Video support** — Drop in a music video or movie clip; VocalDrop extracts audio, processes it, and can re-mux a synced video with the isolated vocal or instrumental track.
-- 🖱️ **Finder Quick Actions** — Right-click any audio file → **Isolate Vocals** straight from Finder.
+- 🔗 **Chain in one pass** — Extract vocals → remove silence → convert, all in a single drag-and-drop run.
+- 🎞️ **Video support** — Drop in a music video or movie clip; VocalDrop extracts the audio, isolates the vocal (or instrumental), and can re-mux a synced video with the stem you chose.
+- 🖱️ **Right-click Quick Actions** — Isolate a vocal straight from your file manager (Finder Quick Actions on macOS).
 - ⌨️ **Full CLI** — Everything the app does is scriptable from the terminal (`vocaldrop vocals song.mp3 --quality max`), with `--json` output for pipelines.
-- 🔒 **Private by design** — all processing runs locally; **your audio and files never leave your Mac**. No sign-up, no API key. (Anonymous crash & usage diagnostics help improve the app — no personal data, no file contents or paths.)
+- 🔒 **Private by design** — all processing runs locally; **your audio and files never leave your computer**. No sign-up, no API key. (Anonymous crash & usage diagnostics help improve the app — no personal data, no file contents or paths.)
 
 ## 📸 The app
 
 <p align="center">
-  <img src="docs/screenshots/01-workspace.png" width="900" alt="VocalDrop workspace: a queue of audio and video tracks on the left, the per-track signal chain (isolate vocals, de-noise, enhance, remove silence, convert) in the center, and a feed of finished results on the right" />
+  <img src="docs/screenshots/01-workspace.png" width="900" alt="VocalDrop workspace: a queue of audio and video tracks on the left, the per-track signal chain (extract vocals, de-noise, enhance, remove silence, convert) in the center, and a feed of finished results on the right" />
 </p>
 
-<p align="center"><em>One window, whole workflow.</em> Drop a mix of <b>audio and video</b> into the queue, dial in the per-track signal chain — <b>isolate vocals → de-noise → AI enhance → remove silence → convert</b> — and every finished track lands in the Results feed, ready to play or reveal in Finder. Everything runs locally on your Mac.</p>
+<p align="center"><em>One window, whole workflow.</em> Drop a mix of <b>audio and video</b> into the queue, dial in the per-track signal chain — <b>extract vocals → de-noise → AI enhance → remove silence → convert</b> — and every finished stem lands in the Results feed, ready to play or reveal in your file manager. Everything runs locally.</p>
 
 ## 🆚 Why VocalDrop?
 
-Most "free" vocal removers are websites that **upload your audio to someone else's server**. VocalDrop is different.
+Most "free" vocal extractors are websites that **upload your audio to someone else's server**. VocalDrop is different.
 
 | | **VocalDrop** | Online tools (e.g. vocalremover.org) | Ultimate Vocal Remover (UVR5) | Moises | iZotope RX |
 |---|:---:|:---:|:---:|:---:|:---:|
 | **Local processing / files stay private** | ✅ | ❌ uploads your files | ✅ | ❌ cloud | ✅ |
 | **Free** | ✅ | limited free tier | ✅ | paid | $$$ paid |
-| **Native macOS app** | ✅ | browser only | ❌ Python/Tk GUI | ✅ | ✅ |
+| **Native desktop app (Mac/Win/Linux)** | ✅ | browser only | ❌ Python/Tk GUI | ✅ | ✅ |
 | **No watermarks / quotas** | ✅ | ❌ | ✅ | ❌ | ✅ |
 | **Apple Silicon GPU (Metal)** | ✅ | n/a | manual setup | ✅ | ✅ |
-| **One-click install** | ✅ DMG | n/a | ❌ dev setup | ✅ | ✅ |
+| **One-click install** | ✅ | n/a | ❌ dev setup | ✅ | ✅ |
 | **No account / login** | ✅ | ⚠️ often required | ✅ | ⚠️ required | ✅ |
 
-Looking for a **free UVR5 alternative for Mac**, a **private Moises alternative**, or an **offline vocal remover with no upload**? That's VocalDrop. (VocalDrop uses the same RoFormer model family as UVR5, but ships as a polished, native Mac app — no Python setup required.)
+Looking for a **free UVR5 alternative**, a **private Moises alternative**, or an **offline acapella extractor with no upload**? That's VocalDrop. (It uses the same RoFormer model family as UVR5, but ships as a polished, native desktop app — no Python setup required.)
 
 ## 📥 Installation
 
-### Option 1 — Download the app (recommended)
+Grab the build for your OS from the [**latest release**](https://github.com/App-Builders-Gang/vocaldrop/releases/latest). The first run downloads the AI engine and models (~2 GB, one-time) — after that VocalDrop is **fully offline**.
 
-1. Go to the [**latest release**](https://github.com/App-Builders-Gang/vocaldrop/releases/latest) and download **`VocalDrop-<version>-arm64.dmg`**.
-2. Open the DMG and drag **VocalDrop** into **Applications**.
-3. ⚠️ **First launch:** this build is not yet code-signed. macOS will show *"VocalDrop cannot be opened because it is from an unidentified developer."* To open it: **right-click (or ⌃-click) the app → Open → Open anyway.** (Signed + notarized builds are on the roadmap.)
-4. The first run downloads the AI engine and models (~2 GB, one-time) — after that VocalDrop is **fully offline**.
+### 🍎 macOS (Apple Silicon)
+1. Download **`VocalDrop-<version>-arm64.dmg`**, open it, and drag **VocalDrop** into **Applications**.
+2. ⚠️ **First launch:** this build isn't code-signed yet, so macOS says *"VocalDrop cannot be opened…"*. **Right-click (⌃-click) the app → Open → Open anyway.**
 
-> **Verify the download:** run `shasum -a 256 VocalDrop-*-arm64.dmg` and compare it to the matching `.sha256` file in the release assets.
+### 🪟 Windows (x64)
+1. Download **`VocalDrop-Setup-<version>.exe`** and run it.
+2. ⚠️ **First launch:** SmartScreen may warn (unsigned build). Click **More info → Run anyway**.
 
-**Requirements:** macOS on **Apple Silicon** (M1/M2/M3/M4) and [ffmpeg](https://formulae.brew.sh/formula/ffmpeg) (`brew install ffmpeg`). Python 3.9–3.12 is provisioned automatically on first launch.
+### 🐧 Linux (x64)
+1. Download **`VocalDrop-<version>.AppImage`**, then `chmod +x VocalDrop-*.AppImage` and run it.
 
-> VocalDrop is **free to use** and distributed as a ready-made Mac app — no build step needed. (It's closed source; the public repo holds releases, screenshots, and this README.)
+> **Verify the download:** each asset ships a matching `.sha256` — compare it with `sha256sum` (Linux/Windows) or `shasum -a 256` (macOS).
+
+**Requirements:** macOS on **Apple Silicon** (M1–M4), **Windows 10/11 (x64)**, or **Linux (x64)**. **ffmpeg is bundled** — nothing else to install. Separation is **GPU-accelerated on Apple Silicon (Metal)**; Windows and Linux run on multi-core **CPU** (slower, but fully offline).
+
+> VocalDrop is **free to use** and distributed as a ready-made app — no build step needed. (It's closed source; the public repo holds releases, screenshots, and this README.)
 
 ## 🚀 Quick start
 
-**In the app:** drag an audio or video file onto the window → tick **Isolate / Silence / Convert** → press **Process**. Done.
+**In the app:** drag an audio or video file onto the window → tick **Vocals / Silence / Convert** → press **Process**. Your isolated vocal (and the instrumental) land in the Results feed.
 
-**From the CLI** (bundled inside the app at `VocalDrop.app/Contents/Resources/bin/vocaldrop` — add it to your `PATH` or use the Finder Quick Actions installer):
+**From the CLI** (bundled inside the app at `…/Resources/bin/vocaldrop` — add it to your `PATH`):
 ```bash
-# Isolate vocals — fast (seconds) or max (best quality)
+# Extract vocals — fast (seconds) or max (best quality)
 vocaldrop vocals song.mp3 --quality fast
 vocaldrop vocals song.mp3 --quality max
 
@@ -107,44 +114,47 @@ Add `--json` to any command for machine-readable progress.
 VocalDrop is built on the **RoFormer** family of separation models — the same state-of-the-art architecture behind the best commercial stem-separation tools.
 
 - **Fast mode** runs a single high-SDR BS-Roformer pass. Great for clean sources and near-real-time on Metal.
-- **Max mode** runs a **3-model ensemble**: three specialized RoFormer checkpoints are each run, then their vocal estimates are **blended** (via weighted averaging in `ensemble.py`), **de-reverbed**, and **de-noised / de-bleded** for the cleanest possible stem.
+- **Max mode** runs a **3-model ensemble**: three specialized RoFormer checkpoints are each run, their vocal estimates are **blended** (weighted averaging in `ensemble.py`), then **de-reverbed** and **de-noised / de-bleeded** for the cleanest possible acapella.
 
-All inference runs through [audio-separator](https://github.com/nomadkaraoke/python-audio-separator) with **Metal (MPS) acceleration**, falling back to CPU per-op where needed (`PYTORCH_ENABLE_MPS_FALLBACK`). Under the hood it's an **Electron** shell over a **Deno** engine sidecar, with a matching **CLI** — so the same engine powers the GUI and your scripts.
+All inference runs through [audio-separator](https://github.com/nomadkaraoke/python-audio-separator). On Apple Silicon it uses **Metal (MPS)** acceleration (falling back to CPU per-op where needed via `PYTORCH_ENABLE_MPS_FALLBACK`); on Windows and Linux it runs on CPU. Under the hood it's an **Electron** shell over a **Deno** engine sidecar, with a matching **CLI** — so the same engine powers the GUI and your scripts.
 
 ## 🔒 Privacy & system requirements
 
-- **Privacy:** **Your audio never leaves your Mac** — all separation, conversion, and cleanup run locally; no cloud, no account. VocalDrop collects **anonymous diagnostics** (crash reports and basic usage events, via Google) to fix bugs and improve the app — never your file contents, file paths, or any personal data. Other network access is limited to the one-time engine/model download on first launch, online URL ingest when you paste a link, and the optional "check for updates" toggle.
-- **System:** macOS on **Apple Silicon** (M-series). Intel/Windows/Linux support is on the roadmap.
+- **Privacy:** **Your audio never leaves your computer** — all separation, conversion, and cleanup run locally; no cloud, no account. VocalDrop collects **anonymous diagnostics** (crash reports and basic usage events, via Google) to fix bugs and improve the app — never your file contents, file paths, or any personal data. Other network access is limited to the one-time engine/model download on first launch, online URL ingest when you paste a link, and the optional "check for updates" toggle.
+- **System:** macOS on **Apple Silicon**, **Windows 10/11 (x64)**, or **Linux (x64)**. GPU acceleration (Metal) on Apple Silicon; CPU on Windows/Linux.
 - **Disk:** ~2 GB for the full model set (Fast mode needs only ~200 MB).
-- Runtime state (Python venv, temp files, default output) lives in `~/Library/Application Support/VocalDrop/`.
+- Runtime state (Python runtime, temp files, default output) lives in your user app-data dir (e.g. `~/Library/Application Support/VocalDrop/` on macOS).
 
 ## ❓ FAQ
 
+**Does it extract the vocals, or remove them?**
+Both. Every run separates the song into a **vocal stem** (acapella) and an **instrumental** — keep whichever you need.
+
 **Is my audio uploaded anywhere?**
-No. VocalDrop runs entirely on your Mac. The first launch downloads the AI models once; after that it's fully offline.
+No. VocalDrop runs entirely on your computer. The first launch downloads the AI models once; after that it's fully offline.
 
 **Does it use the GPU?**
-Yes — on Apple Silicon it uses Metal (MPS) automatically. You can force CPU in Settings → Engine if you prefer.
+On Apple Silicon, yes — Metal (MPS), automatically. On Windows and Linux it runs on CPU (you can force CPU on Mac too in Settings → Engine).
 
 **Is it really free?**
 Yes — free to use for everyone. No ads, no watermarks, no subscription, no feature paywall, no account. (VocalDrop is closed source; it's just given away free.)
 
-**Windows / Linux / Intel Mac?**
-Not yet — currently Apple Silicon only. Intel Mac, Windows, and Linux builds are on the roadmap.
+**Which platforms are supported?**
+macOS (Apple Silicon), Windows 10/11 (x64), and Linux (x64). Intel-Mac builds aren't provided.
 
-**Why do I get an "unidentified developer" warning?**
-The current build isn't code-signed/notarized yet. Right-click the app → **Open** to bypass Gatekeeper. Signed builds are coming.
+**Why do I get an "unidentified developer" / SmartScreen warning?**
+The current builds aren't code-signed/notarized yet. macOS: right-click → **Open**. Windows: **More info → Run anyway**. Signed builds are on the roadmap.
 
 **How is this different from Ultimate Vocal Remover (UVR5)?**
-Same underlying RoFormer models, but VocalDrop is a **native, polished macOS app** with drag-and-drop, video support, format conversion, silence removal, and Finder integration — no Python/Tkinter setup required.
+Same underlying RoFormer models, but VocalDrop is a **native, polished desktop app** with drag-and-drop, video support, format conversion, silence removal, and file-manager integration — no Python/Tkinter setup required.
 
 ## 🛣️ Roadmap
 
-- [ ] Code-signing & notarization (no Gatekeeper warning)
-- [ ] Intel Mac, Windows, and Linux builds
-- [ ] In-app auto-update (Sparkle)
+- [ ] Code-signing & notarization (no Gatekeeper / SmartScreen warning)
+- [ ] NVIDIA (CUDA) GPU acceleration on Windows & Linux
+- [ ] In-app auto-update
 - [ ] Real-time preview before committing a full render
-- [ ] More separation tasks (drums, bass, piano)
+- [ ] More separation targets (drums, bass, piano stems)
 
 ## 🤝 Feedback
 
@@ -157,6 +167,6 @@ VocalDrop is **free to use** software (closed source) © 2026 App Builders Gang.
 It stands on the shoulders of giants:
 - The **RoFormer** separation models and their authors.
 - [**audio-separator**](https://github.com/nomadkaraoke/python-audio-separator) — the inference engine.
-- [Deno](https://deno.land), [Electron](https://www.electronjs.org/), [ffmpeg](https://ffmpeg.org/), and [resemble-enhance](https://github.com/resemble-ai/resemble-enhance).
+- [Deno](https://deno.land), [Electron](https://www.electronjs.org/), and [ffmpeg](https://ffmpeg.org/).
 
 > ⭐ If VocalDrop saves you a subscription, give it a star and tell a producer friend.
